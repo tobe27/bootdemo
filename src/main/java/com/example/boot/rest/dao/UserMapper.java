@@ -1,6 +1,6 @@
-package com.jnshu.boot.dao;
+package com.example.boot.rest.dao;
 
-import com.jnshu.boot.model.User;
+import com.example.boot.rest.model.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

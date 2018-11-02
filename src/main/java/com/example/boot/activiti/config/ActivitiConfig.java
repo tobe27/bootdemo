@@ -1,4 +1,4 @@
-package com.jnshu.boot.activiti.config;
+package com.example.boot.activiti.config;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;

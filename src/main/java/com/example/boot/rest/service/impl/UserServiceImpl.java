@@ -1,8 +1,8 @@
-package com.jnshu.boot.service.impl;
+package com.example.boot.rest.service.impl;
 
-import com.jnshu.boot.dao.UserMapper;
-import com.jnshu.boot.model.User;
-import com.jnshu.boot.service.UserService;
+import com.example.boot.rest.service.UserService;
+import com.example.boot.rest.dao.UserMapper;
+import com.example.boot.rest.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

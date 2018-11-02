@@ -1,4 +1,4 @@
-package com.jnshu.boot.controller;
+package com.example.boot.rest.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

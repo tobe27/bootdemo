@@ -1,6 +1,6 @@
-package com.jnshu.boot.service;
+package com.example.boot.rest.service;
 
-import com.jnshu.boot.model.User;
+import com.example.boot.rest.model.User;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserService {

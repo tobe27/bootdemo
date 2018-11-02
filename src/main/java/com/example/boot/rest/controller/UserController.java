@@ -1,8 +1,8 @@
-package com.jnshu.boot.controller;
+package com.example.boot.rest.controller;
 
-import com.jnshu.boot.model.User;
+import com.example.boot.rest.service.UserService;
+import com.example.boot.rest.model.User;
 import com.alibaba.fastjson.JSON;
-import com.jnshu.boot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

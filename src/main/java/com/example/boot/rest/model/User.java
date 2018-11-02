@@ -1,4 +1,4 @@
-package com.jnshu.boot.model;
+package com.example.boot.rest.model;
 
 import lombok.Data;
 import org.springframework.context.annotation.Bean;
