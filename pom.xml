@@ -32,7 +32,6 @@
             <artifactId>activiti-engine</artifactId>
             <version>6.0.0</version>
         </dependency>
-
         <!--==============必备工具的依赖=======================-->
         <!--Springboot-PageHelper-->
         <dependency>
@@ -70,7 +69,7 @@
         <!--Alibaba Druid-->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.10</version>
         </dependency>
         <!--==============Springboot框架依赖========================-->
@@ -92,17 +91,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <!--统一排除Log依赖冲突-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter</artifactId>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-starter-logging</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
     </dependencies>
 
     <build>

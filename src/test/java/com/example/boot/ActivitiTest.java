@@ -2,8 +2,6 @@ package com.example.boot;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
-import org.activiti.engine.ProcessEngines;
-import org.activiti.engine.RepositoryService;
 import org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.task.Task;
@@ -35,8 +33,8 @@ public class ActivitiTest {
     public void createTask() { // 向数据库导入流程引擎，存入表 act_get_bytearray
         Deployment deployment = processEngine.getRepositoryService()
                 .createDeployment()
-                .addClasspathResource("activiti.bpmn")
-                .addClasspathResource("activiti.png")
+                .addClasspathResource("activiti/activiti.bpmn")
+                .addClasspathResource("activiti/activiti.png")
                 .deploy();
 
         System.out.println("activiti部署id:"+deployment.getId());
