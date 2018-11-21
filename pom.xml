@@ -33,6 +33,13 @@
             <version>6.0.0</version>
         </dependency>
 
+        <!--==============必备工具的依赖=======================-->
+        <!--Springboot-PageHelper-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.10</version>
+        </dependency>
         <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -40,24 +47,14 @@
             <version>1.18.2</version>
             <scope>provided</scope>
         </dependency>
-        <!--security-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-security</artifactId>-->
-            <!--<version>2.0.3.RELEASE</version>-->
-        <!--</dependency>-->
-        <!--Web-->
+        <!--FastJson-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
         </dependency>
 
-        <!--Test-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+        <!--=============DAO层必有依赖=======================-->
         <!--Mybatis-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -76,32 +73,36 @@
             <artifactId>druid</artifactId>
             <version>1.1.10</version>
         </dependency>
-
+        <!--==============Springboot框架依赖========================-->
+        <!--Web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--Test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--Junit-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>com.aliyun</groupId>
-            <artifactId>aliyun-java-sdk-core</artifactId>
-            <version>3.7.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.aliyun</groupId>
-            <artifactId>aliyun-java-sdk-dm</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-
-        <!--FastJson-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
-        </dependency>
-
+        <!--统一排除Log依赖冲突-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter</artifactId>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-starter-logging</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>

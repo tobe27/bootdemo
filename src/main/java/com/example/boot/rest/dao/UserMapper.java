@@ -4,19 +4,25 @@ import com.example.boot.rest.model.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 @Mapper
 @Repository
 public interface UserMapper {
 
     @Select("select * from user where id = #{id}")
-    User findById(@Param("id") String id);
+    User findById(String id);
+
+    @Select("select * from user")
+    List<User> list();
 
     @Update("update user set name = #{name} where id = #{id}")
-    void modifyName(@Param("id") String id,@Param("name") String name );
+    int modifyName(User user);
 
     @Delete("delete from user where id = #{id}")
-    void delete(@Param("id") String id);
+    int delete(String id);
 
     @Insert("insert into user(name,password) values(#{name},#{password})")
-    void addUser(User user);
+    int addUser(User user);
 }
