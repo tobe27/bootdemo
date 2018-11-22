@@ -3,9 +3,12 @@ package com.example.boot.rest.model;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 @Accessors(chain = true)
 @Data
-public class UserDO {
+public class UserDO implements Serializable {
+    private static final long serialVersionUID = 4382629624053154693L;
     private Long id;
 
     private String name;

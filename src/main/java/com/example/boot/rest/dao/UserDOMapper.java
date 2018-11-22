@@ -4,6 +4,8 @@ import com.example.boot.rest.model.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Mapper
 @Repository
 public interface UserDOMapper {
@@ -11,7 +13,9 @@ public interface UserDOMapper {
 
     int insertSelective(UserDO record);
 
-    UserDO selectByPrimaryKey(Long id);
+    UserDO getUserDO(Long id);
+
+    List<UserDO> listUserDOs(UserDO userDO);
 
     int updateByPrimaryKeySelective(UserDO record);
 }

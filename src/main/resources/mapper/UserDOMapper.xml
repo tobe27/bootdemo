@@ -16,10 +16,24 @@
     <result column="updated_at" jdbcType="BIGINT" property="updatedAt" />
   </resultMap>
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="getUserDO" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select *
     from db_user
     where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!--列表-->
+  <select id="listUserDOs" parameterType="com.example.boot.rest.model.UserDO"  resultMap="BaseResultMap">
+    select *
+    from db_user
+    where 1=1
+    <if test="name != null">
+        and name like CONCAT('%', #{name}, '%')
+    </if>
+    <if test="idNumber != null">
+        and idNumber like CONCAT('%', #{idNumber}, '%')
+    </if>
+    order by created_at DESC
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
@@ -27,7 +41,7 @@
     where id = #{id,jdbcType=BIGINT}
   </delete>
 
-  <insert id="insertSelective" parameterType="com.example.boot.rest.model.UserDO">
+  <insert id="insertSelective" keyProperty="id" useGeneratedKeys="true" parameterType="com.example.boot.rest.model.UserDO">
     insert into db_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
